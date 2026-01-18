@@ -27,8 +27,9 @@ function renderSandwiches(sandwiches) {
         return;
     }
 
-    container.innerHTML = sandwiches.map(sandwich => `
+    container.innerHTML = sandwiches.map((sandwich, index) => `
         <div class="sandwich-card">
+            <div class="sandwich-number">#${index + 1}</div>
             <div class="sandwich-header">
                 <div class="place-name">
                     <a href="${sandwich.link}" target="_blank" rel="noopener noreferrer">
