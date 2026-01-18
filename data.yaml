@@ -1,0 +1,15 @@
+sandwiches:
+  - place: "Joe's Deli"
+    link: "https://maps.google.com/?q=Joe's+Deli"
+    rating: 5
+    review: "Perfect pastrami, perfectly toasted bread, life-changing"
+
+  - place: "Corner Bakery"
+    link: "https://maps.google.com/?q=Corner+Bakery"
+    rating: 4
+    review: "Solid turkey club, fresh ingredients, would return"
+
+  - place: "Subway"
+    link: "https://maps.google.com/?q=Subway"
+    rating: 2
+    review: "It's Subway, you know what you're getting"
