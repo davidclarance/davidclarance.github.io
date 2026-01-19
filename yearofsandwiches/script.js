@@ -13,6 +13,16 @@ function getStarDisplay(rating) {
     return `${stars} ${labels[rating]}`;
 }
 
+// Format date to readable string
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+}
+
 // Update the counter
 function updateCounter(count) {
     document.getElementById('sandwichCount').textContent = count;
@@ -30,12 +40,15 @@ function renderSandwiches(sandwiches) {
     container.innerHTML = sandwiches.map((sandwich, index) => `
         <div class="sandwich-card">
             <div class="sandwich-number">#${index + 1}</div>
+            <div class="sandwich-name">${sandwich.name}</div>
+            <div class="sandwich-meta">
+                <a href="${sandwich.link}" target="_blank" rel="noopener noreferrer" class="place-link">
+                    ${sandwich.place}
+                </a>
+                <span class="separator">•</span>
+                <span class="date">${formatDate(sandwich.date)}</span>
+            </div>
             <div class="sandwich-header">
-                <div class="place-name">
-                    <a href="${sandwich.link}" target="_blank" rel="noopener noreferrer">
-                        ${sandwich.place}
-                    </a>
-                </div>
                 <div class="rating">${getStarDisplay(sandwich.rating)}</div>
             </div>
             <div class="review">"${sandwich.review}"</div>

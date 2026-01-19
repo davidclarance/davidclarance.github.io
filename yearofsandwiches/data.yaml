@@ -1,15 +1,21 @@
 sandwiches:
-  - place: "Joe's Deli"
+  - name: "Pastrami on Rye"
+    place: "Joe's Deli"
     link: "https://maps.google.com/?q=Joe's+Deli"
+    date: "2026-01-15"
     rating: 5
     review: "Perfect pastrami, perfectly toasted bread, life-changing"
 
-  - place: "Corner Bakery"
+  - name: "Turkey Club"
+    place: "Corner Bakery"
     link: "https://maps.google.com/?q=Corner+Bakery"
+    date: "2026-01-12"
     rating: 4
     review: "Solid turkey club, fresh ingredients, would return"
 
-  - place: "Subway"
+  - name: "Italian BMT"
+    place: "Subway"
     link: "https://maps.google.com/?q=Subway"
+    date: "2026-01-08"
     rating: 2
     review: "It's Subway, you know what you're getting"

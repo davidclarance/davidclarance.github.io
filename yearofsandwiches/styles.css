@@ -87,29 +87,43 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
-.sandwich-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.sandwich-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
     margin-bottom: 0.5rem;
-    flex-wrap: wrap;
+}
+
+.sandwich-meta {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
     gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
-.place-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #2c3e50;
-}
-
-.place-name a {
-    color: #2c3e50;
+.place-link {
+    color: #7f8c8d;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-.place-name a:hover {
+.place-link:hover {
     color: #F2994A;
+}
+
+.separator {
+    color: #bdc3c7;
+}
+
+.date {
+    color: #95a5a6;
+}
+
+.sandwich-header {
+    margin-bottom: 0.5rem;
 }
 
 .rating {

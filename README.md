@@ -5,7 +5,7 @@ A minimal, clean static website for documenting your sandwich journey throughout
 ## Features
 
 - **Counter**: Automatically counts total sandwiches from your data
-- **Static List**: Display all sandwiches with place, rating, and review
+- **Static List**: Display all sandwiches with name, place, date, rating, and review
 - **YAML Backend**: Simple text-based data storage
 - **Responsive Design**: Works on desktop and mobile
 
@@ -21,24 +21,30 @@ A minimal, clean static website for documenting your sandwich journey throughout
 
 ## How to Add Sandwiches
 
-Edit `data.yaml` to add new sandwiches. Follow this format:
+Edit `yearofsandwiches/data.yaml` to add new sandwiches. Follow this format:
 
 ```yaml
 sandwiches:
-  - place: "Place Name"
-    link: "https://maps.google.com/?q=Place+Name"
+  - name: "Pastrami on Rye"
+    place: "Joe's Deli"
+    link: "https://maps.google.com/?q=Joe's+Deli"
+    date: "2026-01-15"
     rating: 5
-    review: "Your one-line review here"
+    review: "Perfect pastrami, perfectly toasted bread, life-changing"
 
-  - place: "Another Place"
+  - name: "Turkey Club"
+    place: "Corner Bakery"
     link: "https://example.com"
+    date: "2026-01-12"
     rating: 4
-    review: "Another tasty review"
+    review: "Solid turkey club, fresh ingredients, would return"
 ```
 
 ### Fields:
+- **name**: Name of the sandwich (e.g., "Pastrami on Rye", "Italian BMT")
 - **place**: Restaurant or shop name
 - **link**: URL to location (Google Maps, website, etc.)
+- **date**: Date in YYYY-MM-DD format
 - **rating**: Number from 1-5
   - 5 = Legendary
   - 4 = Great
@@ -54,6 +60,9 @@ After editing `data.yaml`, commit and push to GitHub. The site will automaticall
 To test locally, you need a local web server (due to YAML file loading):
 
 ```bash
+# Navigate to the yearofsandwiches directory
+cd yearofsandwiches
+
 # Python 3
 python -m http.server 8000
 
@@ -62,6 +71,18 @@ npx serve
 ```
 
 Then open `http://localhost:8000` in your browser.
+
+## File Structure
+
+```
+yearofsandwiches/
+├── yearofsandwiches/     # Website files
+│   ├── index.html        # Main page
+│   ├── styles.css        # Styling
+│   ├── script.js         # JavaScript
+│   └── data.yaml         # Your sandwich data
+└── README.md             # This file
+```
 
 ## Customization
 
