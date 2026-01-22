@@ -37,9 +37,12 @@ function renderSandwiches(sandwiches) {
         return;
     }
 
-    container.innerHTML = sandwiches.map((sandwich, index) => `
+    // Reverse the array so most recent sandwiches appear first
+    const reversedSandwiches = [...sandwiches].reverse();
+
+    container.innerHTML = reversedSandwiches.map((sandwich, index) => `
         <div class="sandwich-card">
-            <div class="sandwich-number">#${index + 1}</div>
+            <div class="sandwich-number">#${sandwiches.length - index}</div>
             <div class="sandwich-name">${sandwich.name}</div>
             <div class="sandwich-meta">
                 <a href="${sandwich.link}" target="_blank" rel="noopener noreferrer" class="place-link">
