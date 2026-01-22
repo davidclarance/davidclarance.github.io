@@ -20,7 +20,7 @@ async function syncFromSheets() {
     // Fetch data from the sheet
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId,
-      range: 'Sheet1!A:G', // Adjust range as needed
+      range: 'Form Responses 1!A:H', // Timestamp + 7 fields
     });
 
     const rows = response.data.values;
@@ -38,16 +38,16 @@ async function syncFromSheets() {
     for (let i = 1; i < rows.length; i++) {
       const row = rows[i];
 
-      // Skip empty rows
-      if (!row[0]) continue;
+      // Skip empty rows (check if name field is empty)
+      if (!row[1]) continue;
 
       const sandwich = {
-        name: row[0] || '',
-        place: row[1] || '',
-        link: row[2] || '',
-        date: row[3] || '',
-        rating: row[4] ? parseInt(row[4]) : 0,
-        review: row[5] || '',
+        name: row[1] || '',
+        place: row[2] || '',
+        link: row[3] || '',
+        date: row[4] || '',
+        rating: row[5] ? parseInt(row[5]) : 0,
+        review: row[6] || '',
       };
 
       sandwiches.push(sandwich);
