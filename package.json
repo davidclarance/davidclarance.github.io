@@ -1,0 +1,16 @@
+{
+  "name": "yearofsandwiches",
+  "version": "1.0.0",
+  "description": "A Year of Sandwiches - Sync from Google Sheets",
+  "main": "scripts/sync-sheets.js",
+  "scripts": {
+    "sync": "node scripts/sync-sheets.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "googleapis": "^140.0.0",
+    "yaml": "^2.3.4"
+  }
+}
