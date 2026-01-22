@@ -5,3 +5,15 @@ sandwiches:
     date: 2026-01-18
     rating: 3
     review: Great pickled grape salsa!
+  - name: Halloumi, tomato, salad and green chilli
+    place: Home
+    link: https://maps.app.goo.gl/crFCX7MKLNyTiFND9
+    date: 2026-01-20
+    rating: 3
+    review: Green finger chillies make everything better
+  - name: "Egg "
+    place: Little Garden Cafe
+    link: https://maps.app.goo.gl/vvGFS4KpyDkTyEPk9
+    date: 2026-01-21
+    rating: 4
+    review: All you need is egg and bread!
