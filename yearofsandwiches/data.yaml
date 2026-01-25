@@ -17,3 +17,9 @@ sandwiches:
     date: 2026-01-21
     rating: 4
     review: All you need is egg and bread!
+  - name: Turkey, cranberry, bacon and rocket
+    place: Olive and Sage
+    link: https://maps.app.goo.gl/GQag2C1CRD89vdvu5
+    date: 2026-01-24
+    rating: 2
+    review: I really wanted to love this sandwich but it felt quite dry :(
