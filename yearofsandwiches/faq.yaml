@@ -1,0 +1,21 @@
+faqs:
+  - question: "Why are you doing this?"
+    answer: "I simply wanted to eat more sandwiches in 2026. Life is short, sandwiches are delicious, and I believe in setting ambitious goals."
+
+  - question: "What counts as a sandwich?"
+    answer: "Anything with any form of bread and a filling counts as a sandwich. Your feelings about this? Valid, but make your own list if you want to be a sandwich gatekeeper."
+
+  - question: "Do you eat the same sandwich twice?"
+    answer:  "Yes! But I don't record them twice. Sorta like a birding list"
+
+  - question: "Do you make your own sandwiches?"
+    answer: "Yes, they're all listed with under the Location: Home. Check out the map to get my address."
+
+  - question: "What's the worst sandwich you've had?"
+    answer: "There's no bad sandwich, just bad people."
+
+  - question: "Are you going to eat a sandwich every single day?"
+    answer: "No."
+
+  - question: "I don't agree with your rating/review"
+    answer: "Fair. But that's not a question. Make your own claude generated static website."
