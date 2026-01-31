@@ -31,3 +31,9 @@ sandwiches:
     rating: 4
     review: Absolute banger. Only reason it's not a 5 is because there was some
       crunch missing but the flavors were 100!
+  - name: chicken and salad
+    place: The Rustique
+    link: https://maps.app.goo.gl/p8MEbNvmkucyP9Nk8
+    date: 2026-01-31
+    rating: 3
+    review: Love the warm toasted baguette that they bake at home
