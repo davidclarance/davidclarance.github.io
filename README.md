@@ -28,11 +28,14 @@ that file, keeping the name. It renders as a 160px square, cropped with
 `object-fit: cover` so a non-square source fills the box without
 distorting.
 
-Which part of the photo survives that crop is set by `object-position` in
-`assets/style.css`. The current value biases the window towards the top of
-the frame, because the photo is a tall 9:16 shot with the subject's face in
-the upper third — the default centre crop landed on his hands. Swap in a
-differently-framed photo and that value probably wants revisiting.
+The photo floats left and the intro text wraps around it, stacking above
+the text on narrow screens instead.
+
+Which part of the photo survives the crop is set by `object-position` in
+`assets/style.css`. It currently crops from the top of the frame, because
+the photo is a tall 9:16 shot with the subject's face at the top — the
+default centre crop landed on his hands. Swap in a differently-framed photo
+and that value probably wants revisiting.
 
 ## Callouts
 
