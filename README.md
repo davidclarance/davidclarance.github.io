@@ -21,6 +21,13 @@ layout, feed entry and sitemap entry are all inferred. Nothing else is needed.
 Drafts go in `_drafts/` without a date in the filename. Jekyll ignores that
 directory when it builds, so a draft is never published by accident.
 
+## The home page portrait
+
+`index.md` points at `assets/portrait.jpg`. To change the picture, replace
+that file, keeping the name. It is rendered as a 112px circle and cropped
+with `object-fit: cover`, so a non-square photo is centre-cropped rather
+than squashed; a roughly square source around 400px or larger looks best.
+
 ## Callouts
 
 For a boxed aside — an announcement, a caveat, a note that a post is out of

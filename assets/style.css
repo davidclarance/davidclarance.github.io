@@ -204,6 +204,17 @@ th { color: var(--heading); font-weight: 600; }
 img { max-width: 100%; height: auto; }
 
 figure { margin: 0 0 1.25rem; }
+
+/* Portrait on the home page. Fixed square plus object-fit so an off-square
+   source crops rather than distorts. */
+.portrait {
+  display: block;
+  width: 7rem;
+  height: 7rem;
+  margin: 0 0 0.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
 figcaption { color: var(--muted); font-size: 0.9rem; }
 
 /* ---------------------------------------------------------------------------
