@@ -1,0 +1,49 @@
+# Site
+title: David Clarance
+tagline: A place to write things down.
+description: >-
+  Notes, essays and occasional half-formed thoughts.
+author: David Clarance
+url: "https://davidclarance.github.io"
+baseurl: ""
+lang: en
+
+# Markdown: kramdown with GitHub-flavoured input, so fenced code blocks,
+# tables and footnotes all work.
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Posts live at /blog/some-title/ . Changing this later breaks existing links
+# and RSS subscribers, so it is worth leaving alone.
+permalink: /blog/:title/
+timezone: Etc/UTC
+
+# All three are on the GitHub Pages plugin allowlist, so they run without CI.
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: /feed.xml
+
+# A post only needs a `title` in its front matter; everything else is inferred.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+# GitHub Pages renders stray markdown as pages by default; keep repo docs out.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

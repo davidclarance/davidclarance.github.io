@@ -1,0 +1,274 @@
+/* ---------------------------------------------------------------------------
+   Tokens. Light is defined here in full; the dark block below only swaps
+   values, so there is exactly one place to change a colour.
+   --------------------------------------------------------------------------- */
+
+:root {
+  color-scheme: light;
+
+  --bg:      #fcfcfa;
+  --text:    #23271f;
+  --heading: #14170f;
+  --muted:   #6a7064;
+  --accent:  #386641;  /* fern green — 6.5:1 on --bg */
+  --rule:    #e3e5dd;
+  --fill:    #f2f3ed;  /* code backgrounds */
+
+  --serif: Charter, "Bitstream Charter", "Iowan Old Style", "Palatino Linotype",
+           Palatino, "Book Antiqua", Georgia, serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+          "Liberation Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --bg:      #11150f;
+    --text:    #d5d9ce;
+    --heading: #ebeee4;
+    --muted:   #8c9386;
+    --accent:  #9cc5a1;  /* sage — 9.6:1 on --bg */
+    --rule:    #262b23;
+    --fill:    #1b2018;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Page frame
+   --------------------------------------------------------------------------- */
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  /* Flex column so the colophon sits at the foot of short pages rather than
+     floating halfway up. */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  max-width: 36rem;          /* ~65 characters at this size */
+  margin: 0 auto;
+  padding: 3rem 1.25rem 2.5rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1.125rem;       /* 18px */
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+main { flex: 1; margin: 2.5rem 0 3.5rem; }
+
+/* ---------------------------------------------------------------------------
+   Masthead and colophon
+   --------------------------------------------------------------------------- */
+
+.masthead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.masthead-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--heading);
+  text-decoration: none;
+}
+
+.masthead nav a,
+.colophon a {
+  text-decoration: none;
+}
+.masthead nav a:hover,
+.colophon a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.masthead nav a {
+  margin-left: 1rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+.masthead nav a:first-child { margin-left: 0; }
+
+.colophon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* ---------------------------------------------------------------------------
+   Typography
+   --------------------------------------------------------------------------- */
+
+h1, h2, h3, h4 {
+  color: var(--heading);
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 2.25rem 0 0.75rem;
+}
+h1 { font-size: 1.6rem; margin-top: 0; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.05rem; }
+h4 { font-size: 1rem; }
+
+p, ul, ol, blockquote, pre, table { margin: 0 0 1.25rem; }
+ul, ol { padding-left: 1.5rem; }
+li { margin-bottom: 0.35rem; }
+li > ul, li > ol { margin: 0.35rem 0 0; }
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+a:hover { text-decoration-thickness: 2px; }
+
+strong, b { color: var(--heading); font-weight: 600; }
+
+blockquote {
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--rule);
+  color: var(--muted);
+  font-style: italic;
+}
+blockquote > :last-child { margin-bottom: 0; }
+
+hr {
+  width: 4rem;
+  height: 0;
+  margin: 2.75rem auto;
+  border: 0;
+  border-top: 1px solid var(--accent);
+}
+
+/* ---------------------------------------------------------------------------
+   Code
+   --------------------------------------------------------------------------- */
+
+code, kbd, samp, pre { font-family: var(--mono); font-size: 0.85em; }
+
+code {
+  padding: 0.1em 0.3em;
+  background: var(--fill);
+  border-radius: 3px;
+}
+
+pre {
+  padding: 0.9rem 1rem;
+  background: var(--fill);
+  border-radius: 3px;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+pre code { padding: 0; background: none; }
+
+/* ---------------------------------------------------------------------------
+   Tables, figures
+   --------------------------------------------------------------------------- */
+
+table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+th, td { padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--rule); text-align: left; }
+th { color: var(--heading); font-weight: 600; }
+
+img { max-width: 100%; height: auto; }
+
+figure { margin: 0 0 1.25rem; }
+figcaption { color: var(--muted); font-size: 0.9rem; }
+
+/* ---------------------------------------------------------------------------
+   Post list and post metadata
+   --------------------------------------------------------------------------- */
+
+.post-list { list-style: none; margin: 0; padding: 0; }
+
+.post-list li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.post-list time {
+  flex: 0 0 6.5rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  padding-top: 0.3em;         /* optical alignment with the serif title */
+  font-variant-numeric: tabular-nums;
+}
+
+.post-date {
+  margin-top: -0.5rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.empty { color: var(--muted); font-style: italic; }
+
+/* ---------------------------------------------------------------------------
+   Footnotes (kramdown)
+   --------------------------------------------------------------------------- */
+
+.footnotes {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* ---------------------------------------------------------------------------
+   Narrow screens: stack the date above the title rather than shrinking it.
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 30rem) {
+  body { padding-top: 2rem; font-size: 1.0625rem; }
+  /* Stacked, the gap between date and title must stay smaller than the
+     gap between entries, or the grouping reads wrong. */
+  .post-list li { flex-direction: column; gap: 0.1rem; margin-bottom: 1.1rem; }
+  /* flex-basis becomes a height once the row stacks, so reset it. */
+  .post-list time { flex: none; padding-top: 0; }
+}
+
+/* ---------------------------------------------------------------------------
+   Syntax highlighting (rouge). Deliberately quiet: comments recede, strings
+   take the accent, everything else is body text at a different weight.
+   --------------------------------------------------------------------------- */
+
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs,
+.highlight .cd, .highlight .cp { color: var(--muted); font-style: italic; }
+
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn,
+.highlight .kp, .highlight .kr, .highlight .kt,
+.highlight .o, .highlight .ow { color: var(--heading); font-weight: 600; }
+
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sc,
+.highlight .sd, .highlight .se, .highlight .sh, .highlight .si, .highlight .sr,
+.highlight .ss, .highlight .sx { color: var(--accent); }
+
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi,
+.highlight .mo, .highlight .il { color: var(--accent); }
+
+.highlight .nf, .highlight .nc, .highlight .nn { color: var(--heading); }
+.highlight .nb, .highlight .bp, .highlight .nv, .highlight .na { color: var(--text); }
+
+.highlight .err { color: var(--text); background: none; }
+.highlight .gd { color: var(--muted); }
+.highlight .gi { color: var(--accent); }
