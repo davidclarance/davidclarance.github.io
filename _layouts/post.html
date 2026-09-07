@@ -6,5 +6,11 @@ layout: default
   <p class="post-date">
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
   </p>
-  {{ content }}
+  {%- comment -%}
+    Defer every image, then undo it for the first one. A post's opening photo
+    is above the fold and is usually the largest contentful paint, so it should
+    not wait; everything after it is far enough down to load on approach.
+  {%- endcomment -%}
+  {%- assign deferred = content | replace: '<img ', '<img loading="lazy" decoding="async" ' -%}
+  {{ deferred | replace_first: '<img loading="lazy" decoding="async" ', '<img ' }}
 </article>
