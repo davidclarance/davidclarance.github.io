@@ -14,8 +14,9 @@
   --rule:    #e3e5dd;
   --fill:    #f2f3ed;  /* code backgrounds */
 
-  --serif: Charter, "Bitstream Charter", "Iowan Old Style", "Palatino Linotype",
-           Palatino, "Book Antiqua", Georgia, serif;
+  /* Bear Blog's typeface. Verdana ships on Windows and macOS; the fallbacks
+     are the nearest-metric faces on Linux and Android. */
+  --sans: Verdana, Geneva, "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
           "Liberation Mono", monospace;
 }
@@ -48,14 +49,14 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
 
-  max-width: 36rem;          /* ~65 characters at this size */
+  max-width: 38rem;          /* ~65 characters of Verdana at 16px */
   margin: 0 auto;
   padding: 3rem 1.25rem 2.5rem;
   background: var(--bg);
   color: var(--text);
-  font-family: var(--serif);
-  font-size: 1.125rem;       /* 18px */
-  line-height: 1.65;
+  font-family: var(--sans);
+  font-size: 1rem;           /* 16px, as Bear sets it */
+  line-height: 1.6;
   text-rendering: optimizeLegibility;
 }
 
@@ -95,7 +96,7 @@ main { flex: 1; margin: 2.5rem 0 3.5rem; }
 .masthead nav a {
   margin-left: 1rem;
   font-family: var(--mono);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   letter-spacing: 0.02em;
 }
 .masthead nav a:first-child { margin-left: 0; }
@@ -108,7 +109,7 @@ main { flex: 1; margin: 2.5rem 0 3.5rem; }
   padding-top: 1.25rem;
   border-top: 1px solid var(--rule);
   font-family: var(--mono);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--muted);
 }
 
@@ -122,10 +123,10 @@ h1, h2, h3, h4 {
   line-height: 1.25;
   margin: 2.25rem 0 0.75rem;
 }
-h1 { font-size: 1.6rem; margin-top: 0; }
-h2 { font-size: 1.25rem; }
-h3 { font-size: 1.05rem; }
-h4 { font-size: 1rem; }
+h1 { font-size: 1.45rem; margin-top: 0; }
+h2 { font-size: 1.15rem; }
+h3 { font-size: 1rem; }
+h4 { font-size: 0.95rem; }
 
 p, ul, ol, blockquote, pre, table { margin: 0 0 1.25rem; }
 ul, ol { padding-left: 1.5rem; }
@@ -207,16 +208,16 @@ figcaption { color: var(--muted); font-size: 0.9rem; }
 .post-list time {
   flex: 0 0 6.5rem;
   font-family: var(--mono);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--muted);
-  padding-top: 0.3em;         /* optical alignment with the serif title */
+  padding-top: 0.2em;         /* optical alignment with the title */
   font-variant-numeric: tabular-nums;
 }
 
 .post-date {
   margin-top: -0.5rem;
   font-family: var(--mono);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--muted);
 }
 
@@ -239,7 +240,7 @@ figcaption { color: var(--muted); font-size: 0.9rem; }
    --------------------------------------------------------------------------- */
 
 @media (max-width: 30rem) {
-  body { padding-top: 2rem; font-size: 1.0625rem; }
+  body { padding-top: 2rem; }
   /* Stacked, the gap between date and title must stay smaller than the
      gap between entries, or the grouping reads wrong. */
   .post-list li { flex-direction: column; gap: 0.1rem; margin-bottom: 1.1rem; }

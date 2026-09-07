@@ -7,9 +7,9 @@ the design settles, then delete it.
 
 ## Headings and prose
 
-Body text is a system serif at 18px on a 65-character measure, which is the
-width most people read comfortably without losing their place between lines.
-Links take [the accent colour](/) and keep their underline.
+Body text is Verdana at 16px on a 65-character measure, which is the width
+most people read comfortably without losing their place between lines. Links
+take [the accent colour](/) and keep their underline.
 
 ### A third-level heading
 
@@ -38,11 +38,11 @@ def greet(name: str) -> str:
 
 ## Tables
 
-| Element   | Font  | Size   |
-|-----------|-------|--------|
-| Body      | Serif | 18px   |
-| Dates     | Mono  | 0.8rem |
-| Headings  | Serif | 1.6rem |
+| Element  | Font    | Size    |
+|----------|---------|---------|
+| Body     | Verdana | 16px    |
+| Dates    | Mono    | 0.85rem |
+| Headings | Verdana | 1.45rem |
 
 ## Footnotes
 
