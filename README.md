@@ -28,8 +28,9 @@ that file, keeping the name. It renders as a 160px square, cropped with
 `object-fit: cover` so a non-square source fills the box without
 distorting.
 
-The photo floats left and the intro text wraps around it, stacking above
-the text on narrow screens instead.
+The photo is centred above the intro text. It is `display: block` with
+`margin: 0 auto` — an inline image ignores `margin: auto` and silently
+left-aligns, which is easy to mistake for a centring bug elsewhere.
 
 Which part of the photo survives the crop is set by `object-position` in
 `assets/style.css`. It currently crops from the top of the frame, because
