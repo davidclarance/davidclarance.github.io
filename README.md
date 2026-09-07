@@ -1,6 +1,6 @@
 # davidclarance.github.io
 
-Personal site and blog. Built by GitHub Pages with its stock Jekyll — there is
+Personal site and writing. Built by GitHub Pages with its stock Jekyll — there is
 no build step, no CI workflow and no dependencies to install.
 
 ## Writing a post
@@ -15,7 +15,7 @@ title: Some title
 Body text in markdown.
 ```
 
-Commit it. The filename sets the date and the URL (`/blog/some-title/`); the
+Commit it. The filename sets the date and the URL (`/writing/some-title/`); the
 layout, feed entry and sitemap entry are all inferred. Nothing else is needed.
 
 Drafts go in `_drafts/` without a date in the filename. Jekyll ignores that
@@ -27,7 +27,7 @@ directory when it builds, so a draft is never published by accident.
 |-------------------|-----------------------------------------------|
 | `_config.yml`     | Site title, description, permalinks, plugins  |
 | `index.md`        | Homepage                                      |
-| `blog.html`       | Post list at `/blog/`                         |
+| `writing.html`    | Post list at `/writing/`                      |
 | `_posts/`         | Published posts                               |
 | `_drafts/`        | Unpublished drafts                            |
 | `_layouts/`       | Three HTML templates                          |
