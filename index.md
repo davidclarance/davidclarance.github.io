@@ -3,6 +3,8 @@ title: Home
 heading: false
 ---
 
+![David Clarance](/assets/portrait.jpg){: .portrait}
+
 Placeholder introduction. Two or three sentences about who you are and what
 you write about go here — this is the first thing anyone reads, and it is the
 only part of the site that needs a voice.
