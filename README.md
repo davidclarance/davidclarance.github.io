@@ -21,6 +21,20 @@ layout, feed entry and sitemap entry are all inferred. Nothing else is needed.
 Drafts go in `_drafts/` without a date in the filename. Jekyll ignores that
 directory when it builds, so a draft is never published by accident.
 
+## Callouts
+
+For a boxed aside — an announcement, a caveat, a note that a post is out of
+date — write a block quote and tag it with `{: .note}` underneath:
+
+```markdown
+> I'll be in Japan in April. Email me recommendations.
+{: .note}
+```
+
+That `{: ... }` is a kramdown inline attribute list: it attaches the class
+to the element directly above, and `.note` is styled in `assets/style.css`.
+Adding another kind of box is a new class in that file, nothing more.
+
 ## Layout
 
 | Path              | What it is                                    |

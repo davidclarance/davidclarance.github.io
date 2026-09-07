@@ -54,3 +54,12 @@ rule.
 That horizontal rule is the one other place the accent colour appears.
 
 [^1]: Like this one.
+
+## Callouts
+
+> Quick announcement: a boxed aside for things that sit outside the flow of
+> the post — an update, a caveat, a note that this piece is out of date.
+{: .note}
+
+Write it as an ordinary block quote and tag it with `{: .note}` on the line
+directly underneath.

@@ -12,6 +12,7 @@
   --muted:   #6a7064;
   --accent:  #386641;  /* fern green — 6.5:1 on --bg */
   --rule:    #e3e5dd;
+  --rule-firm: #9ea395;  /* dashed callout edge; too faint at --rule */
   --fill:    #f2f3ed;  /* code backgrounds */
 
   /* Bear Blog's typeface. Verdana ships on Windows and macOS; the fallbacks
@@ -31,6 +32,7 @@
     --muted:   #8c9386;
     --accent:  #9cc5a1;  /* sage — 9.6:1 on --bg */
     --rule:    #262b23;
+    --rule-firm: #5f6a56;
     --fill:    #1b2018;
   }
 }
@@ -150,6 +152,17 @@ blockquote {
   font-style: italic;
 }
 blockquote > :last-child { margin-bottom: 0; }
+
+/* A callout, written as a blockquote tagged `{: .note}` in markdown. Resets
+   the quote treatment above: boxed rather than ruled, upright rather than
+   italic, body colour rather than muted. */
+blockquote.note {
+  padding: 0.9rem 1.1rem;
+  border: 1px dashed var(--rule-firm);
+  border-radius: 3px;
+  color: var(--text);
+  font-style: normal;
+}
 
 hr {
   width: 4rem;
