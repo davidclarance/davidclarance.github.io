@@ -206,14 +206,17 @@ img { max-width: 100%; height: auto; }
 figure { margin: 0 0 1.25rem; }
 
 /* Portrait on the home page. Fixed square plus object-fit so an off-square
-   source crops rather than distorts. */
+   source crops rather than distorts; object-position picks which part. */
 .portrait {
   display: block;
-  width: 7rem;
-  height: 7rem;
+  width: 10rem;
+  height: 10rem;
   margin: 0 0 0.5rem;
-  border-radius: 50%;
+  border-radius: 3px;
   object-fit: cover;
+  /* The source is a 9:16 phone photo with the face in the top third, so a
+     centred square crop lands on the torso. Bias the window upwards. */
+  object-position: 50% 15%;
 }
 figcaption { color: var(--muted); font-size: 0.9rem; }
 

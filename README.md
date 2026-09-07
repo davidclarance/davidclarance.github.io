@@ -24,9 +24,15 @@ directory when it builds, so a draft is never published by accident.
 ## The home page portrait
 
 `index.md` points at `assets/portrait.jpg`. To change the picture, replace
-that file, keeping the name. It is rendered as a 112px circle and cropped
-with `object-fit: cover`, so a non-square photo is centre-cropped rather
-than squashed; a roughly square source around 400px or larger looks best.
+that file, keeping the name. It renders as a 160px square, cropped with
+`object-fit: cover` so a non-square source fills the box without
+distorting.
+
+Which part of the photo survives that crop is set by `object-position` in
+`assets/style.css`. The current value biases the window towards the top of
+the frame, because the photo is a tall 9:16 shot with the subject's face in
+the upper third — the default centre crop landed on his hands. Swap in a
+differently-framed photo and that value probably wants revisiting.
 
 ## Callouts
 
